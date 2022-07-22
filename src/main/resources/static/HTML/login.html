@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+    <div class = 'navbar'>
+        <ul class = 'nav-list'>
+            <li class = 'nav-item'>
+                <a class = "nav-link" href = 'home.html'>
+                    <img src = "https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/South_Florida_Bulls_logo.svg/800px-South_Florida_Bulls_logo.svg.png"
+                    height = "60px" width = "60px" id = 'logo'>
+                </a>
+            </li>
+            <li class = 'nav-item'>
+                <a class = "nav-link" href = 'courses.html'>Courses</a>
+            </li>
+            <li class = 'nav-item'>
+                <a class = "nav-link" href = 'user.html'>User Profile</a>
+            </li>
+            <li class = 'nav-item'>
+                <a class = "nav-link" href = 'enroll.html'>Enroll</a>
+            </li>
+            <li class = 'nav-item'>
+                <button id="login-button" onclick = "window.location.href = 'login.html'">Student Login</button>
+            </li>
+        </ul>
+    </div>
+
+    <div id = "main">
+        <div id = "login" style = "margin-top: 100px; align-items: center;">
+            <h1>Please Login Below</h1>
+            <form id = "login-form">
+                <label for="username">Username: </label>
+                <input id = "login-username" type = "text", name = "username" 
+                maxlength="50" required>
+                <label for="password">Password: </label>
+                <input id = "login-password" type = "password", name = "password" 
+                maxlength="50" required >
+                <input type = "submit" value = "login">
+            </form>
+        </div>
+
+        <div id = "register">
+            <button  onclick="toggleForm()">Not a member? Register Now!</button>
+            <form id = "register-form" hidden>
+                <label for="first">First Name: </label>
+                <input id="first" type="text" name="first" maxlength="50"/>
+                <label for="last">Last Name: </label>
+                <input id="last" type="text" name="last" maxlength="50">
+                <label for="username">Username: </label>
+                <input id="username" type="text" name="username" maxlength="50"/>
+                <lable for="password">Password: </lable>
+                <input id="password" type="password" name="password" minlength="8" required/>
+                <label for="email">Email: </label>
+                <input id="email" type="email" name="email" maxlength="50">
+                <input type="submit" value="Register"/>        
+            </form>
+        </div>
+    </div>
+    
+    <script src="../JS/login.js"></script>
+</body>
+</html>
